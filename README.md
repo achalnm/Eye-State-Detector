@@ -27,6 +27,7 @@ The **Eye State Detector** is a web-based application designed to analyze whethe
 
 ## Project Structure
 
+```bash
 Eye-State-Detector/
 ├── static/
 │   ├── css/
@@ -39,13 +40,3 @@ Eye-State-Detector/
 ├── app.py
 ├── README.md
 └── requirements.txt
-
-
-
-
-
-
-
-
-
-      

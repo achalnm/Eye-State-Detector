@@ -9,14 +9,12 @@ The **Eye State Detector** is a web-based application designed to analyze whethe
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [System Requirements](#system-requirements)
-- [Screenshots](#screenshots)
 - [Acknowledgements](#acknowledgements)
-- [License](#license)
+- [Made By](#made-by)
 
 ## Features
 

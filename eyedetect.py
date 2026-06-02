@@ -43,8 +43,14 @@ def home():
 
 def detect_eyes(image_path):
     image = cv2.imread(image_path)
+    if image is None:
+        return ["Could not read the image. Try a JPG or PNG file."]
+
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     rects = detector(gray, 1)
+
+    if len(rects) == 0:
+        return ["No face detected in the image."]
 
     results = []
 
@@ -55,12 +61,12 @@ def detect_eyes(image_path):
 
         leftEye = shape[36:42]
         rightEye = shape[42:48]
-        
+
         leftEAR = eye_aspect_ratio(leftEye)
         rightEAR = eye_aspect_ratio(rightEye)
-        
+
         ear = (leftEAR + rightEAR) / 2.0
-        
+
         if ear < 0.3:
             results.append("Eyes are closed!")
         else:

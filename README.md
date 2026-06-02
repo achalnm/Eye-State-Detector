@@ -1,6 +1,20 @@
 # Eye State Detector
 
-Mini project I did for Computer Graphics and Image Processing Subject in 6th sem BE CS at Jyothy Institute of Technology, VTU. It was my first time using dlib and doing anything with facial landmarks so the code is pretty basic but it helped me understand how image processing actually works in practice.
+Mini project I did for Computer Graphics and Image Processing in 6th sem BE CS at Jyothy Institute of Technology, VTU. It was my first time using dlib and doing anything with facial landmarks so the code is pretty basic but it helped me understand how image processing actually works in practice.
+
+## Screenshots
+
+Home page where you pick and upload the image:
+
+![Home page](screenshots/home.png)
+
+Result when eyes are detected as closed:
+
+![Eyes closed result](screenshots/result-closed.png)
+
+Result when eyes are detected as open:
+
+![Eyes open result](screenshots/result-open.png)
 
 ## How it works
 
@@ -13,10 +27,12 @@ Mini project I did for Computer Graphics and Image Processing Subject in 6th sem
 
 1. Clone the repo
 2. Download shape_predictor_68_face_landmarks.dat from dlib.net and drop it in the project root (see note below)
-3. Make a virtual environment and activate it
+3. Make a virtual environment with Python 3.8 and activate it
 4. Run `pip install -r requirements.txt`
 5. Run `python eyedetect.py`
 6. Go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
+
+Upload JPG or PNG files. WEBP and other formats may not work depending on your OpenCV build.
 
 ## Tech stack
 
@@ -31,3 +47,5 @@ Mini project I did for Computer Graphics and Image Processing Subject in 6th sem
 ## Note
 
 The landmark model file (shape_predictor_68_face_landmarks.dat) is not in the repo because it is 95MB. Download it from [dlib.net](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2), extract the .bz2 and put the .dat file in the root folder before running.
+
+dlib is pinned to 19.22.1 in requirements.txt. Newer versions fail to build on Python 3.13 and with CMake 4.x due to a CUDA detection issue. Use Python 3.8 to avoid this.

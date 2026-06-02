@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
     background-color: #2c2c2c;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -21,13 +21,8 @@ header, footer {
     z-index: 10;
 }
 
-header {
-    top: 0;
-}
-
-footer {
-    bottom: 0;
-}
+header { top: 0; }
+footer { bottom: 0; }
 
 .container {
     max-width: 800px;
@@ -38,7 +33,7 @@ footer {
     border-radius: 10px;
     animation: fadeIn 1s ease-in-out;
     text-align: center;
-    margin-top: 40px; /* Adjusted margin-top */
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,21 +43,17 @@ footer {
 h1, h2 {
     color: #00adb5;
     font-weight: 700;
-    margin-bottom: 0.2rem; /* Reduced margin-bottom */
-    font-family: 'Roboto', sans-serif; /* Ensured consistent font */
+    margin-bottom: 1rem;
 }
 
 .result {
-    text-align: center;
-    margin-bottom: 0.5rem; /* Reduced margin-bottom */
     font-size: 2rem;
     font-weight: 700;
-    padding: 0.2rem; /* Reduced padding */
+    margin-bottom: 0.5rem;
 }
 
 .image-container {
-    text-align: center;
-    margin-bottom: 1.5rem; /* Reduced margin-bottom */
+    margin-bottom: 1.5rem;
 }
 
 img {
@@ -73,7 +64,22 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.field .button {
+label, .button {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+input[type="file"] {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #444444;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.button {
     background-color: #393e46;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -81,12 +87,12 @@ img {
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 1rem;
     border-radius: 5px;
-    text-decoration: none; /* Ensure button style consistency */
-    color: white; /* Ensure button text color */
-    margin-top: 1rem; /* Adjusted margin-top */
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
 }
 
-.field .button:hover {
+.button:hover {
     background-color: #00adb5;
     transform: scale(1.05);
 }
@@ -97,12 +103,6 @@ footer p {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

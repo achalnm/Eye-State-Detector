@@ -49,3 +49,10 @@ Upload JPG or PNG files. WEBP and other formats may not work depending on your O
 The landmark model file (shape_predictor_68_face_landmarks.dat) is not in the repo because it is 95MB. Download it from [dlib.net](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2), extract the .bz2 and put the .dat file in the root folder before running.
 
 dlib is pinned to 19.22.1 in requirements.txt. Newer versions fail to build on Python 3.13 and with CMake 4.x due to a CUDA detection issue. Use Python 3.8 to avoid this.
+
+## Made by
+
+| Name | USN |
+| ---- | --- |
+| Achal N | 1JT21CS003 |
+| Pujitha DR | 1JT21CS128 |

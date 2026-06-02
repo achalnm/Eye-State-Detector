@@ -1,6 +1,6 @@
 # Eye State Detector
 
-Mini project I did for Computer Graphics and Image Processing in 6th sem BE CS at Jyothy Institute of Technology, VTU. It was my first time using dlib and doing anything with facial landmarks so the code is pretty basic but it helped me understand how image processing actually works in practice.
+Mini project I did for Computer Graphics and Image Processing Subject in 6th sem BE CS at Jyothy Institute of Technology, VTU. It was my first time using dlib and doing anything with facial landmarks so the code is pretty basic but it helped me understand how image processing actually works in practice.
 
 ## How it works
 

@@ -2,6 +2,7 @@ import dlib
 import cv2
 import numpy as np
 from flask import Flask, request, render_template, redirect, url_for
+from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
@@ -33,7 +34,7 @@ def home():
         if file.filename == '':
             return redirect(request.url)
         if file:
-            filename = file.filename
+            filename = secure_filename(file.filename)
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
             result = detect_eyes(filepath)
@@ -60,7 +61,7 @@ def detect_eyes(image_path):
         
         ear = (leftEAR + rightEAR) / 2.0
         
-        if ear < 0.3:  # You can adjust this threshold
+        if ear < 0.3:
             results.append("Eyes are closed!")
         else:
             results.append("Eyes are open")
@@ -68,4 +69,4 @@ def detect_eyes(image_path):
     return results
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True)  # dev only
